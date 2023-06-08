@@ -10,8 +10,8 @@ public class HelloWorldController
         return "Hello java";
     }
 
-    @RequestMapping("/toto")
+    @RequestMapping("/tata")
     public String toto(){
-        return "hello toto";
+        return "hello tata";
     }
 }
