@@ -5,10 +5,18 @@ pipeline {
         jdk 'java'
     }
     stages{
-        stage ('build') {
-            steps {
-                sh 'mvn package'
-            }
+
+    stage('Build'){
+        steps{
+
+             sh 'mvn spring-boot:build-image'
+
+
+           //configFileProvider([configFile(fileId: '0da0c4fe-93ea-40e7-8015-545cba7777a5', variable: 'MAVEN_SETTINGS_XML')]) {
+           //     sh 'mvn -s $MAVEN_SETTINGS_XML clean deploy'
+           // }
         }
+    }
+
     }
 }

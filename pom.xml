@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>producing-web-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>producing-web-service</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -41,11 +41,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>6.0.9</version>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -61,13 +56,13 @@
 		<repository>
 			<id>nexus</id>
 			<name>Internal Releases</name>
-			<url>http://localhost:8082/repository/maven-snapshots/</url>
+			<url>https://243b-2a01-e0a-aad-7840-f5a4-3470-9551-210a.ngrok-free.app/repository/maven-snapshots/</url>
 		</repository>
 
 		<snapshotRepository>
 			<id>nexus</id>
 			<name>Internal Releases</name>
-			<url>http://localhost:8082/repository/maven-snapshots/</url>
+			<url>https://243b-2a01-e0a-aad-7840-f5a4-3470-9551-210a.ngrok-free.app/repository/maven-snapshots/</url>
 		</snapshotRepository>
 
 	</distributionManagement>
