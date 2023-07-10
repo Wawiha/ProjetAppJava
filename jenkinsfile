@@ -1,5 +1,12 @@
 pipeline {
     agent any
+    parameters {
+        booleanParam(
+          defaultValue: true,
+          description: 'Lancement deg tests ou pas',
+          name: 'Skiptests'
+        )
+    }
     tools {
         maven 'maven'
         jdk 'java'
@@ -8,8 +15,8 @@ pipeline {
 
     stage('Build'){
         steps{
-
-             sh 'mvn clean package -DskipTests=false'
+             echo "Le param des test est: ${env.Skiptests}"
+             sh 'mvn clean package -DskipTests=${env.Skiptests}'
 
 
            //configFileProvider([configFile(fileId: '0da0c4fe-93ea-40e7-8015-545cba7777a5', variable: 'MAVEN_SETTINGS_XML')]) {
